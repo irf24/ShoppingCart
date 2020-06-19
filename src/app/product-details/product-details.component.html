@@ -1,0 +1,41 @@
+<div >Products</div>
+<hr>
+<div class="container-fluid" *ngIf="product">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card-container" style="position:sticky;top:82px;left:0px">
+        <div class="card text-center">
+          <div class="card-body mx-auto">
+            <img class="my-4" [src]="product.url" alt="Card image cap">
+          </div>
+        </div>
+        <button class="btn-primary btn-block my-3" (click)="addToCart(product)">
+          <span *ngIf="!added" class="text-white">Add to Cart</span>
+          <span *ngIf="added" class="text-white">Remove from Cart</span>
+        </button>
+        <a [routerLink]="['/cart']"><button class="btn-warning btn-block my-3">Go to Cart</button></a>
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-title">
+            <h2>{{product.name}}</h2>
+          </div>
+          <h3>{{product.price|currency:'INR'}}</h3>
+          <hr>
+          <ul class="my-4" *ngFor="let details of product.highlights">
+            <li>{{details}}</li>
+          </ul>
+          <hr>
+            <h2>Description</h2>
+            <p>{{product.description}}</p>
+            <hr>
+            <h2>Description</h2>
+            <p>{{product.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
