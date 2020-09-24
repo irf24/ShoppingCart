@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { PRODUCTS} from '../products';
+import * as firebase from 'firebase/app';
+import 'firebase/auth';
 
 @Component({
   selector: 'app-top-bar',
@@ -7,16 +10,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopBarComponent implements OnInit {
 
-  constructor() { }
+  loggedIn : boolean = false;
+  user;
+  constructor() { 
+    this.user = firebase.auth().currentUser;
+
+    if(this.user){
+      this.loggedIn = true;
+    }
+    else{
+      this.loggedIn = false;
+    }
+
+    firebase.auth().onAuthStateChanged((user)=>{
+      if(user){
+        this.loggedIn = true;
+      }
+      else{
+        this.loggedIn = false;
+      }
+    })
+  }
 
   ngOnInit() {
   }
 
 }
 
-
-/*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/

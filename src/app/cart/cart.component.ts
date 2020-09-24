@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../cart.service';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-cart',
@@ -14,11 +14,11 @@ export class CartComponent implements OnInit {
 
   constructor(
     private  cartService : CartService,
-    private formBuilder : FormBuilder
+    private fb : FormBuilder
   ) {
-    this.checkoutForm = this.formBuilder.group({
-      name: '',
-      address: ''
+    this.checkoutForm = this.fb.group({
+      name: ['',[Validators.required]],
+      address: ['',[Validators.required]]
     });
    }
 
@@ -34,11 +34,16 @@ export class CartComponent implements OnInit {
     }
   }
   deleteQty(item){
-    if(item[1]>0){
+    if(item[1]>1){
       this.cartService.deleteQty(item);
       this.cartService.total -= item[0].price;
       this.total = this.cartService.getTotal();
     }
+  }
+
+  clearItem(item){
+    let index = this.items.indexOf(item);
+    this.items.splice(index,1); 
   }
 
   onSubmit(customerData) {

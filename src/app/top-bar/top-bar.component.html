@@ -1,11 +1,11 @@
 <a [routerLink]="['/']">
-  <h1>My Store</h1>
+  <h4 class="text-white">Ecart</h4>
 </a>
 
-<a [routerLink]="['/cart']"><i class="material-icons cart-icon">shopping_cart</i></a>
+<div>
+  <a [routerLink]="['/cart']"><i class="material-icons cart-icon">shopping_cart</i></a>
+  <a [routerLink]="['/login']" *ngIf="!loggedIn"><i class="material-icons cart-icon">person</i></a>
+  <a [routerLink]="['/login']" *ngIf="loggedIn"><i class="material-icons cart-icon">how_to_reg</i></a>
+</div>
 
-<!--
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
--->
+

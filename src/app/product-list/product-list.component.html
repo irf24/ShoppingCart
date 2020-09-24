@@ -1,7 +1,9 @@
-<div class="d-flex my-4 justify-content-between">
-  <div >Products</div>
-  <div >Category :
-    <select (click)="selectCategory($event)">
+<div class="d-flex my-4 justify-content-center">
+  <div class="input-group my-2 col-5">
+    <input type="text" class="form-control search" placeholder="Search item" [(ngModel)]="text">
+  </div>
+  <div class="my-2 ">
+    <select (click)="selectCategory($event)" class="form-control category">
       <option >Mobiles</option>
       <option>Laptops</option>
       <option>TV</option>
@@ -11,13 +13,13 @@
 </div>
 <hr>
 <div class="row">
-  <div class="col-sm-6 col-md-4 col-xl-3 p-4" *ngFor="let product of selectedProduct">
-    <div class="card text-center">
+  <div class="col-sm-6 col-md-4 col-xl-3 p-4" *ngFor="let product of selectedProduct | searchFilter : text">
+    <div class="card text-center" [routerLink]="['products',product.id]">
       <div class="img-container p-4 mx-auto">
         <img class="product-image" [src]="product.url" alt="Card image cap">
       </div>
       <div class="card-body">
-        <h5 class="card-title"><a [title]="product.name + ' details'" [routerLink]="['products',product.id]">{{product.name}}</a></h5>
+        <h5 class="card-title"><a [title]="product.name + ' details'" >{{product.name}}</a></h5>
       </div>
       <div class="card-footer d-flex justify-content-center">
         <h2>{{product.price | currency : 'INR'}}</h2>

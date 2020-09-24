@@ -7,5 +7,9 @@
 
 .cart-image{
   height : 100px;
-  width : auto;
+  max-width:100%;
+}
+
+.shipping-form{
+  max-width:100%;
 }

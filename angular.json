@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ShoppingCart": {
+    "Shopping-cart-app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ShoppingCart",
+            "outputPath": "dist/Shopping-cart-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -29,8 +29,7 @@
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
-            ]
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"]
           },
           "configurations": {
             "production": {
@@ -66,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ShoppingCart:build"
+            "browserTarget": "Shopping-cart-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ShoppingCart:build:production"
+              "browserTarget": "Shopping-cart-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ShoppingCart:build"
+            "browserTarget": "Shopping-cart-app:build"
           }
         },
         "test": {
@@ -114,15 +113,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ShoppingCart:serve"
+            "devServerTarget": "Shopping-cart-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ShoppingCart:serve:production"
+              "devServerTarget": "Shopping-cart-app:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "ShoppingCart"
+  "defaultProject": "Shopping-cart-app"
 }

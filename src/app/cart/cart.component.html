@@ -10,16 +10,19 @@
             <div class="col-md-4">
               <img class="cart-image" [src]="item[0].url">
             </div>
-            <div class="col-md-4">
-              <div class="qty">
-                Qty :
-                <i (click)="deleteQty(item)" class="material-icons btn-outline-primary">remove_circle_outline</i>
-                  <span class="m-3 p-3 border border-primary">{{item[1]}}</span>
-                <i (click)="addQty(item)" class="material-icons btn-outline-primary">add_shopping_cart</i>
+            <div class="col-sm-4">
+              <div class="qty col-md-6 text-center">
+                Qty : <span>{{item[1]}}</span>
+                <div class="cart-buttons d-flex justify-content-between">
+                  <i (click)="deleteQty(item)" class="material-icons btn-outline-primary">remove_circle_outline</i>
+                  <i></i>
+                  <i (click)="addQty(item)" class="material-icons btn-outline-primary">add_shopping_cart</i>
+                </div>
               </div>
             </div>
             <div class="col-md-4">
               <h2>{{item[0].price*item[1]|currency:'INR'}}</h2>
+              <button class="btn btn-dark" (click)="clearItem(item)">Remove Item</button>
             </div>
           </div>
           <hr>
@@ -33,26 +36,28 @@
       </div>
     </div>
     <div class="col-md-4">
-      Shipping Details
-      <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+       <div class="card border-0 p-3">
+          <div class="card-body">
+              <div class="card-title text-center">
+                  <h4>Shipping Details</h4>
+              </div>
+              <div class="card-text p-3 ">
+                <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+                      <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Name">
+                      </div>
 
-        <div>
-          <label for="name">
-            Name
-          </label>
-          <input id="name" type="text" formControlName="name">
-        </div>
+                      <div class="form-group">
+                          <textarea class="form-control" placeholder="Address"></textarea>
+                      </div>
 
-        <div>
-          <label for="address">
-            Address
-          </label>
-          <input id="address" type="text" formControlName="address">
-        </div>
-
-        <a [routerLink]="['/message']"><button class="btn-warning" type="submit" >Proceed to Checkout</button></a>
-
-      </form>
+                      <div class="text-center" >
+                        <a [routerLink]="['/message']"><button class="btn-warning" type="submit" >Proceed to Checkout</button></a>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
 
     </div>
   </div>

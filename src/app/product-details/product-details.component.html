@@ -1,4 +1,4 @@
-<div >Products</div>
+<div ><a [routerLink]="['/']">{{product.category}}</a> \ {{product.name}}</div>
 <hr>
 <div class="container-fluid" *ngIf="product">
   <div class="row">
@@ -31,8 +31,7 @@
             <h2>Description</h2>
             <p>{{product.description}}</p>
             <hr>
-            <h2>Description</h2>
-            <p>{{product.description}}</p>
+            <h2>Specifications</h2>
         </div>
       </div>
     </div>

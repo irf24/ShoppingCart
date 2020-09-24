@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { PRODUCTS } from '../products';
+import { PRODUCTS} from '../products';
 import { CartService } from '../cart.service';
 import { Product } from '../product';
 
@@ -11,6 +11,7 @@ import { Product } from '../product';
 })
 export class ProductListComponent {
   products = PRODUCTS;
+  text;
   selectedProduct : Product[] = [];
   category:string = "Mobiles";
   notification : boolean = false;

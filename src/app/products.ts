@@ -1,5 +1,6 @@
 import { Product } from './product';
 
+
 export const PRODUCTS : Product[] = [
   {
     id : 105,
@@ -323,7 +324,7 @@ export const PRODUCTS : Product[] = [
     "16MP + 5MP + 2MP + Low Light Sensor | 32MP Front Camera",
     "4000 mAh Li-ion Polymer Battery",
     "Helio P22 (MTK6762) Processor"
-    ],
+    ]
   },
   {
     id : 301 ,
@@ -337,7 +338,7 @@ export const PRODUCTS : Product[] = [
     "16MP + 5MP + 2MP + Low Light Sensor | 32MP Front Camera",
     "4000 mAh Li-ion Polymer Battery",
     "Helio P22 (MTK6762) Processor"
-    ],
+    ]
   },
   {
     id : 301 ,
@@ -351,7 +352,7 @@ export const PRODUCTS : Product[] = [
     "16MP + 5MP + 2MP + Low Light Sensor | 32MP Front Camera",
     "4000 mAh Li-ion Polymer Battery",
     "Helio P22 (MTK6762) Processor"
-    ],
+    ]
   },
   {
     id : 301 ,
@@ -365,7 +366,7 @@ export const PRODUCTS : Product[] = [
     "16MP + 5MP + 2MP + Low Light Sensor | 32MP Front Camera",
     "4000 mAh Li-ion Polymer Battery",
     "Helio P22 (MTK6762) Processor"
-    ],
+    ]
   },
   {
     id : 301 ,
@@ -379,14 +380,60 @@ export const PRODUCTS : Product[] = [
     "16MP + 5MP + 2MP + Low Light Sensor | 32MP Front Camera",
     "4000 mAh Li-ion Polymer Battery",
     "Helio P22 (MTK6762) Processor"
-    ],
+    ]
+  },
+  {
+    id : 401 ,
+    name : "Whirlpool 190 L Direct Cool Single Door 4 Star",
+    price : 1299,
+    url : "../assets/images/Refrigerators/sapphire-radiance-4-whirlpool-original-imafgw6zqv49txut.jpeg" ,
+    description : "This Whirlpool Refrigerator makes use of the 6th Sense QuickCool technology to ensure cooling retention for up to nine hours. This way, when the power goes out, you can still enjoy chilled beverages and ice creams. Equipped with Toughened Glass Shelves, you can store large containers of food without causing any damage to the appliance.",
+    category : "Refrigerator",
+    highlights : ["190 L : Good for couples and small families",
+      "DC Inverter Compressor",
+      "4 Star : For Energy savings up to 45%",
+      "Direct Cool : Economical, consumes less electricity, requires manual defrosting"
+    ]
+  },
+  {
+    id : 401 ,
+    name : "Whirlpool 190 L Direct Cool Single Door 4 Star",
+    price : 1299,
+    url : "../assets/images/Refrigerators/sapphire-radiance-4-whirlpool-original-imafgw6zqv49txut.jpeg" ,
+    description : "This Whirlpool Refrigerator makes use of the 6th Sense QuickCool technology to ensure cooling retention for up to nine hours. This way, when the power goes out, you can still enjoy chilled beverages and ice creams. Equipped with Toughened Glass Shelves, you can store large containers of food without causing any damage to the appliance.",
+    category : "Refrigerator",
+    highlights : ["190 L : Good for couples and small families",
+      "DC Inverter Compressor",
+      "4 Star : For Energy savings up to 45%",
+      "Direct Cool : Economical, consumes less electricity, requires manual defrosting"
+    ]
+  },
+  {
+    id : 401 ,
+    name : "Whirlpool 190 L Direct Cool Single Door 4 Star",
+    price : 1299,
+    url : "../assets/images/Refrigerators/sapphire-radiance-4-whirlpool-original-imafgw6zqv49txut.jpeg" ,
+    description : "This Whirlpool Refrigerator makes use of the 6th Sense QuickCool technology to ensure cooling retention for up to nine hours. This way, when the power goes out, you can still enjoy chilled beverages and ice creams. Equipped with Toughened Glass Shelves, you can store large containers of food without causing any damage to the appliance.",
+    category : "Refrigerator",
+    highlights : ["190 L : Good for couples and small families",
+      "DC Inverter Compressor",
+      "4 Star : For Energy savings up to 45%",
+      "Direct Cool : Economical, consumes less electricity, requires manual defrosting"
+    ]
+  },
+  {
+    id : 401 ,
+    name : "Whirlpool 190 L Direct Cool Single Door 4 Star",
+    price : 1299,
+    url : "../assets/images/Refrigerators/sapphire-radiance-4-whirlpool-original-imafgw6zqv49txut.jpeg" ,
+    description : "This Whirlpool Refrigerator makes use of the 6th Sense QuickCool technology to ensure cooling retention for up to nine hours. This way, when the power goes out, you can still enjoy chilled beverages and ice creams. Equipped with Toughened Glass Shelves, you can store large containers of food without causing any damage to the appliance.",
+    category : "Refrigerator",
+    highlights : ["190 L : Good for couples and small families",
+      "DC Inverter Compressor",
+      "4 Star : For Energy savings up to 45%",
+      "Direct Cool : Economical, consumes less electricity, requires manual defrosting"
+    ]
   }
 
 ];
 
-
-/*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/
